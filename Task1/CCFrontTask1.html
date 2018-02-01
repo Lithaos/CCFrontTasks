@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: arial;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFF99;
+        }
+
+        .container {
+            margin: 5% 30%;
+            white-space: nowrap;
+        }
+
+        .element {
+            background-color: #EEEEEE;
+            border: 1px solid #999999;
+            position: relative;
+            padding: 1px 4px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 2px 2px 4px #666666;
+        }
+
+        .element:nth-child(even) {
+            left: 10px;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .element:nth-child(odd) {
+            right: 10px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .element:first-child {
+            border-radius: 3px 3px 0 3px;
+        }
+        .element:last-child {
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+	
+}
+
+        span {
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        span:nth-child(even) {
+            align-items: right;
+            color: #000000;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: visible;
+        }
+
+        .element:nth-child(even) span:nth-child(even) {
+            color: #666666;
+        }
+
+        .element:nth-child(odd) span:nth-child(odd) {
+            color: #999999;
+        }
+         .element:last-child {
+            color: #999999;
+        }
+        
+        @media only screen and (max-width: 900px) {
+            .container {
+                margin: 5% 27%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 5% 28%;
+            }
+        }
+
+        @media only screen and (max-width: 250px) {
+            .container {
+                margin: 5% 16%;
+            }
+        }
+
+    </style>
+
+    <div class="container">
+        <div class="element">
+            <span>Short text</span>
+            <span>Is short</span>
+        </div>
+        <div class="element">
+            <span>A little bit longer text</span>
+            <span>Is longer</span>
+        </div>
+        <div class="element">
+            <span>A long text is here, totally for no reason</span>
+            <span>Yes it is</span>
+        </div>
+        <div class="element">
+            <span>A long text is here, totally for no reason</span>
+            <span>Yes it is</span>
+        </div>
+        <div class="element">
+            <span>A long text is here also, for the same reason</span>
+            <span>Is long.</span>
+        </div>
+        <div class="element">
+            <span>ok</span>
+            <span>ok</span>
+        </div>
+    </div>
+</body>
+
+</html>
